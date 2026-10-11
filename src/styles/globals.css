@@ -1,0 +1,102 @@
+/* Self-Hosted Font Packages via @fontsource (Zero Runtime CDN) */
+@import "@fontsource/cormorant-garamond/400.css";
+@import "@fontsource/cormorant-garamond/600.css";
+@import "@fontsource/cormorant-garamond/700.css";
+@import "@fontsource/plus-jakarta-sans/300.css";
+@import "@fontsource/plus-jakarta-sans/400.css";
+@import "@fontsource/plus-jakarta-sans/500.css";
+@import "@fontsource/plus-jakarta-sans/600.css";
+@import "@fontsource/plus-jakarta-sans/700.css";
+@import "@fontsource/noto-serif-devanagari/400.css";
+@import "@fontsource/noto-serif-devanagari/600.css";
+@import "@fontsource/noto-serif-devanagari/700.css";
+
+@import "./tokens.css";
+@import "tailwindcss";
+
+@theme {
+  --color-navy-950: #061522;
+  --color-navy-900: #0A1D30;
+  --color-navy-850: #0E243A;
+  --color-navy-800: #142E4A;
+  --color-navy-700: #1D3F64;
+
+  --color-gold-300: #F7DFAB;
+  --color-gold-400: #F3D18B;
+  --color-gold-500: #D6A34D;
+  --color-gold-600: #BA8532;
+  --color-gold-700: #936521;
+
+  --color-cream-50: #FBF8F3;
+  --color-cream-100: #F4EFE6;
+  --color-cream-200: #E6DCCB;
+  --color-cream-300: #C5BFB5;
+
+  --color-luxury-grey: #A9B2BC;
+
+  --font-serif: var(--font-serif);
+  --font-sans: var(--font-sans);
+  --font-hindi: var(--font-hindi);
+}
+
+@layer utilities {
+  .bg-gold-gradient {
+    background: linear-gradient(135deg, #F3D18B 0%, #D6A34D 50%, #9C6F28 100%);
+  }
+
+  .text-gold-gradient {
+    background: linear-gradient(135deg, #F9E7C4 0%, #F3D18B 25%, #D6A34D 70%, #BA8532 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .glass-card {
+    background: rgba(10, 29, 48, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(214, 163, 77, 0.22);
+  }
+
+  .gold-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, rgba(214, 163, 77, 0.5) 50%, transparent 100%);
+  }
+
+  .focus-ring {
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 2px;
+  }
+}
+
+/* Accessibility: Skip to Content */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 1rem;
+  background: var(--accent);
+  color: var(--color-midnight-navy);
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  z-index: 100;
+  transition: top 0.2s ease;
+  border-radius: var(--radius-sm);
+}
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #061522;
+}
+::-webkit-scrollbar-thumb {
+  background: #142E4A;
+  border-radius: 4px;
+  border: 1px solid rgba(214, 163, 77, 0.25);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D6A34D;
+}

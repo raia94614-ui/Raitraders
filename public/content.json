@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 2,
+  "brand": {
+    "businessName": "RAI TRADERS",
+    "tagline": {
+      "en": "Wallpaper Designing • Wall Painting",
+      "hi": "आपके घर, दुकान और सपनों को दें एक नया और खूबसूरत रूप"
+    },
+    "phone": "7000302682",
+    "phoneDisplay": "+91 70003 02682",
+    "email": "raitraders0006@gmail.com",
+    "address": {
+      "en": "Zone 1, MP Nagar, Bhopal, Madhya Pradesh, India",
+      "hi": "ज़ोन 1, एमपी नगर, भोपाल, मध्य प्रदेश, भारत"
+    },
+    "city": "Bhopal",
+    "state": "Madhya Pradesh",
+    "whatsappNumber": "7000302682",
+    "googleMapsUrl": "https://maps.google.com/?q=Zone+1+MP+Nagar+Bhopal",
+    "googleMapsEmbed": "",
+    "instagram": "",
+    "facebook": ""
+  },
+  "hero": {
+    "badge": {
+      "en": "Bhopal's Premier Luxury Wall Studio",
+      "hi": "भोपाल का प्रतिष्ठित लग्जरी वॉल स्टूडियो"
+    },
+    "title": {
+      "en": "Transform Your Walls into Works of Art",
+      "hi": "अपनी दीवारों को दें एक नया, राजसी और खूबसूरत रूप"
+    },
+    "description": {
+      "en": "Exclusive imported designer wallpapers, artistic wall textures, and master painting solutions crafted for high-end homes and businesses across Bhopal.",
+      "hi": "प्रीमियम वॉलपेपर डिजाइनिंग, रॉयल वॉल टेक्सचर और मास्टर वॉल पेंटिंग — अब भोपाल के हर घर और प्रतिष्ठान के लिए।"
+    },
+    "primaryCtaText": {
+      "en": "Schedule Free Site Visit",
+      "hi": "मुफ़्त साइट विज़िट बुक करें"
+    },
+    "primaryCtaLink": "#contact",
+    "secondaryCtaText": {
+      "en": "WhatsApp Consultation",
+      "hi": "व्हाट्सएप परामर्श"
+    },
+    "secondaryCtaLink": "https://wa.me/917000302682",
+    "backgroundImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80",
+    "statsBadge": {
+      "en": "1000+ Walls Transformed in Bhopal",
+      "hi": "भोपाल में 1000+ दीवारों का कायाकल्प"
+    }
+  },
+  "trustHighlights": [
+    {
+      "id": "th-1",
+      "title": {
+        "en": "German Adhesive Bond",
+        "hi": "जर्मन हैवी एडहेसिव पेस्ट"
+      },
+      "description": {
+        "en": "Zero bubbling or edge peeling guarantee for 8+ years.",
+        "hi": "8+ वर्षों तक बिना बबलिंग या किनारे उखड़ने की गारंटी।"
+      },
+      "icon": "shield"
+    },
+    {
+      "id": "th-2",
+      "title": {
+        "en": "Precision Pattern Matching",
+        "hi": "सीमलेस पैटर्न अलाइनमेंट"
+      },
+      "description": {
+        "en": "Flawless vertical joint alignment with zero visible seams.",
+        "hi": "अदृश्य जोड़ों के साथ 100% सटीक लंबवत पैटर्न मैचिंग।"
+      },
+      "icon": "sparkles"
+    },
+    {
+      "id": "th-3",
+      "title": {
+        "en": "Rapid 24-48 Hr Execution",
+        "hi": "त्वरित 24-48 घंटे में काम"
+      },
+      "description": {
+        "en": "Clean, dust-minimized installation with prompt handover.",
+        "hi": "धूल-मुक्त एवं स्वच्छ इंस्टॉलेशन, समय पर हैंडओवर।"
+      },
+      "icon": "clock"
+    },
+    {
+      "id": "th-4",
+      "title": {
+        "en": "Free Measurement Visit",
+        "hi": "भोपाल में मुफ़्त नाप व परामर्श"
+      },
+      "description": {
+        "en": "Doorstep catalog presentation across all Bhopal localities.",
+        "hi": "घर बैठे कैटलॉग चयन व दीवार की सटीक नाप की सुविधा।"
+      },
+      "icon": "ruler"
+    }
+  ]
+}
