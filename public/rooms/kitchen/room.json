@@ -1,0 +1,60 @@
+{
+  "id": "kitchen",
+  "name": "Modular Chef Kitchen",
+  "nameHi": "मॉड्यूलर किचन",
+  "initialView": {
+    "yaw": 0,
+    "pitch": -2,
+    "fov": 82
+  },
+  "surfaces": [
+    {
+      "id": "cabinets",
+      "label": "Matte Charcoal Cabinet Wall",
+      "labelHi": "किचन कैबिनेट वॉल",
+      "defaultColor": "#2C3035",
+      "maskFile": "masks/cabinets.png",
+      "avgLuminance": 0.38
+    },
+    {
+      "id": "backsplash",
+      "label": "Marble Slab Backsplash",
+      "labelHi": "मार्बल बैकस्प्लैश",
+      "defaultColor": "#EBE9E4",
+      "maskFile": "masks/backsplash.png",
+      "avgLuminance": 0.669
+    },
+    {
+      "id": "island-base",
+      "label": "Calacatta Waterfall Island Base",
+      "labelHi": "वॉटरफॉल आइलैंड बेस",
+      "defaultColor": "#5C3E28",
+      "maskFile": "masks/island-base.png",
+      "avgLuminance": 0.557
+    },
+    {
+      "id": "ceiling",
+      "label": "Coffered Architectural Ceiling",
+      "labelHi": "कॉफ़र्ड सीलिंग",
+      "defaultColor": "#FAF8F5",
+      "maskFile": "masks/ceiling.png",
+      "avgLuminance": 0.677
+    }
+  ],
+  "hotspots": [
+    {
+      "toRoomId": "living",
+      "yaw": -120,
+      "pitch": -2,
+      "label": "Back to Living Room",
+      "labelHi": "लिविंग रूम"
+    },
+    {
+      "toRoomId": "exterior",
+      "yaw": 80,
+      "pitch": -2,
+      "label": "Garden Terrace Window",
+      "labelHi": "गार्डन टेरेस"
+    }
+  ]
+}

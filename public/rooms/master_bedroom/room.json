@@ -1,0 +1,60 @@
+{
+  "id": "master_bedroom",
+  "name": "Master Bedroom Suite",
+  "nameHi": "मास्टर बेडरूम",
+  "initialView": {
+    "yaw": 0,
+    "pitch": -2,
+    "fov": 82
+  },
+  "surfaces": [
+    {
+      "id": "accent-wall",
+      "label": "Travertine & Fluted Bed Wall",
+      "labelHi": "फ्लूटेड वुड हेडबोर्ड वॉल",
+      "defaultColor": "#D4C6B2",
+      "maskFile": "masks/accent-wall.png",
+      "avgLuminance": 0.526
+    },
+    {
+      "id": "ceiling",
+      "label": "Vaulted Cove Ceiling",
+      "labelHi": "वॉल्टेड सीलिंग",
+      "defaultColor": "#FAF7F0",
+      "maskFile": "masks/ceiling.png",
+      "avgLuminance": 0.612
+    },
+    {
+      "id": "floor",
+      "label": "Wide-Plank Oak Floor",
+      "labelHi": "ओक बेडरूम फर्श",
+      "defaultColor": "#BE9B70",
+      "maskFile": "masks/floor.png",
+      "avgLuminance": 0.511
+    },
+    {
+      "id": "balcony-soffit",
+      "label": "Dressing & Wardrobe Feature",
+      "labelHi": "ड्रेसिंग वार्डरोब",
+      "defaultColor": "#78553A",
+      "maskFile": "masks/balcony-soffit.png",
+      "avgLuminance": 0.347
+    }
+  ],
+  "hotspots": [
+    {
+      "toRoomId": "exterior",
+      "yaw": -75,
+      "pitch": -2,
+      "label": "Cantilever Balcony Terrace",
+      "labelHi": "बालकनी टेरेस"
+    },
+    {
+      "toRoomId": "living",
+      "yaw": 120,
+      "pitch": -15,
+      "label": "Down to Living Room",
+      "labelHi": "लिविंग रूम"
+    }
+  ]
+}

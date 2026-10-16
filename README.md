@@ -105,9 +105,82 @@ npm run build
 
 ---
 
+## 🎨 RAI Visualizer — Photoreal 360° Room Painter (Pre-Rendered Panorama + Mask Recolor)
+
+Flagship feature mounted at `/#/visualizer` and accessible from the homepage hero CTA ("Apna Ghar Design Karein (3D)").
+
+### Core Architecture & Shader Mathematics
+Photorealism is achieved using **real equirectangular 360° pre-rendered panoramas** combined with **anti-aliased grayscale surface masks** and real-time WebGL GLSL fragment shader recoloring:
+
+1. **Inside-Out Sphere**:
+   Rendered on an inverted 360° sphere (`radius = 500, scale = [-1, 1, 1]` with `THREE.BackSide`), supporting drag/touch rotate with inertia, pinch/scroll zoom (FOV 40°–90°), mobile gyroscope orientation, and fullscreen view.
+2. **Luminance-Preserving Recolor Equation**:
+   $$L_{\text{pixel}} = 0.2126 \cdot R + 0.7152 \cdot G + 0.0722 \cdot B \quad (\text{in linear space})$$
+   $$\text{New Color} = \text{Target Color} \times \left(\frac{L_{\text{pixel}}}{L_{\text{surface\_avg}}}\right) + \text{HighPassDetail}$$
+   This ensures that **100% of physical shadows, directional light falloffs, ambient occlusion, and corner darkening are preserved**—the wall never looks flat.
+3. **Plaster Grain & High-Pass Detail Term**:
+   Preserves original high-frequency wall micro-texture and plaster stipple.
+4. **Physically Plausible Finish Controls**:
+   - **Matte**: Purely diffuse, original shadow retention.
+   - **Satin**: Subtle specular highlight sheen boost on bright spots.
+   - **Gloss**: Rich reflective highlight boost derived from source luminance.
+5. **Seamless Wallpaper Projection**:
+   Seamless patterns are projected onto surface masks with perspective-aware repeat scale and rotation controls, multiplied by the same physical luminance map so patterns sit naturally in the room's light.
+6. **Smooth 400ms Color Cross-Fade & Before/After Comparison Split Slider**.
+
+---
+
+### How to Add a New Room (No Code Changes Needed!)
+Adding a new room to RAI Visualizer is 100% data-driven:
+
+1. **Create Room Folder**:
+   Create a folder at `/public/rooms/{roomId}/` (e.g. `/public/rooms/executive_office/`).
+2. **Add 360° Panorama (`base.jpg`)**:
+   Save a 2:1 equirectangular panorama image (e.g. 4096×2048 or 2048×1024) as `/public/rooms/{roomId}/base.jpg`.
+3. **Add Grayscale Surface Masks (`masks/{surfaceId}.png`)**:
+   Create anti-aliased grayscale PNGs in `/public/rooms/{roomId}/masks/`:
+   - White (`#FFFFFF`) = Paintable surface.
+   - Black (`#000000`) = Background / unpaintable furniture / floor.
+   - E.g. `masks/accent-wall.png`, `masks/wall-left.png`, `masks/ceiling.png`.
+4. **Create `room.json`**:
+   Save `/public/rooms/{roomId}/room.json` matching this schema:
+   ```json
+   {
+     "id": "executive_office",
+     "name": "Executive Office Suite",
+     "nameHi": "एग्जीक्यूटिव ऑफिस",
+     "initialView": { "yaw": 0, "pitch": 0, "fov": 75 },
+     "surfaces": [
+       {
+         "id": "accent-wall",
+         "label": "Mahogany Desk Accent Wall",
+         "labelHi": "डेस्क एक्सेंट वॉल",
+         "defaultColor": "#0E1B33",
+         "maskFile": "masks/accent-wall.png",
+         "avgLuminance": 0.52
+       }
+     ],
+     "hotspots": [
+       {
+         "toRoomId": "living",
+         "yaw": 180,
+         "pitch": -2,
+         "label": "Living Room",
+         "labelHi": "लिविंग रूम"
+       }
+     ]
+   }
+   ```
+5. **Register in `/public/rooms/rooms.json`**:
+   Add an entry with `id`, `name`, `nameHi`, `emoji`, `folder`, and `areaDefaultSqFt`.
+   The studio will automatically discover and render the room!
+
+---
+
 ## 🚀 Deployment Instructions
 
 ### Permanent Free Hosting (Netlify, Vercel, Cloudflare Pages)
 1. Fork or clone this repository.
 2. Connect to Netlify or Vercel with build command `npm run build` and publish directory `dist`.
 3. To update site copy without touching code, open `/#/admin`, make edits, click **Export ZIP Pack**, and drop the unzipped `content.json` and `content-assets/` into `public/`.
+

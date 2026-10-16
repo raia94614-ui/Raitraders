@@ -1,0 +1,53 @@
+{
+  "id": "bathroom",
+  "name": "Luxury Spa Bath",
+  "nameHi": "बाथरूम / स्पा",
+  "initialView": {
+    "yaw": 0,
+    "pitch": -2,
+    "fov": 80
+  },
+  "surfaces": [
+    {
+      "id": "shower-wall",
+      "label": "Bookmatched Calacatta Marble",
+      "labelHi": "कलाकाट्टा मार्बल वॉल",
+      "defaultColor": "#EBE9E4",
+      "maskFile": "masks/shower-wall.png",
+      "avgLuminance": 0.564
+    },
+    {
+      "id": "vanity-wall",
+      "label": "Fluted Oak Vanity Wall",
+      "labelHi": "वैनिटी फीचर वॉल",
+      "defaultColor": "#7A583A",
+      "maskFile": "masks/vanity-wall.png",
+      "avgLuminance": 0.614
+    },
+    {
+      "id": "ceiling",
+      "label": "Recessed Architectural Ceiling",
+      "labelHi": "सीलिंग (छत)",
+      "defaultColor": "#FAF9F6",
+      "maskFile": "masks/ceiling.png",
+      "avgLuminance": 0.641
+    },
+    {
+      "id": "floor",
+      "label": "Honed Marble Stone Floor",
+      "labelHi": "मार्बल फर्श",
+      "defaultColor": "#D5D1CB",
+      "maskFile": "masks/floor.png",
+      "avgLuminance": 0.684
+    }
+  ],
+  "hotspots": [
+    {
+      "toRoomId": "master_bedroom",
+      "yaw": 172,
+      "pitch": -3,
+      "label": "To Master Bedroom Suite",
+      "labelHi": "मास्टर बेडरूम"
+    }
+  ]
+}

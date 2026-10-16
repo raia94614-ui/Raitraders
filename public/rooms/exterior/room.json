@@ -1,0 +1,75 @@
+{
+  "id": "exterior",
+  "name": "Modern Architectural Villa",
+  "nameHi": "विला एक्सटीरियर",
+  "initialView": {
+    "yaw": 75,
+    "pitch": -2,
+    "fov": 86
+  },
+  "surfaces": [
+    {
+      "id": "stucco-facade",
+      "label": "Upper Stucco Facade",
+      "labelHi": "अपर स्टको वॉल",
+      "defaultColor": "#F7F4EE",
+      "maskFile": "masks/stucco-facade.png",
+      "avgLuminance": 0.498
+    },
+    {
+      "id": "brick-facade",
+      "label": "White Brick Garage Wall",
+      "labelHi": "व्हाइट ब्रिक वॉल",
+      "defaultColor": "#EDE8DF",
+      "maskFile": "masks/brick-facade.png",
+      "avgLuminance": 0.456
+    },
+    {
+      "id": "garage-door",
+      "label": "Modern Garage Door",
+      "labelHi": "मॉडर्न गैराज डोर",
+      "defaultColor": "#2B2E34",
+      "maskFile": "masks/garage-door.png",
+      "avgLuminance": 0.381
+    },
+    {
+      "id": "wood-soffits",
+      "label": "Cedar Wood Eaves Soffit",
+      "labelHi": "लकड़ी सीलिंग ईव्स",
+      "defaultColor": "#8C5A2C",
+      "maskFile": "masks/wood-soffits.png",
+      "avgLuminance": 0.371
+    },
+    {
+      "id": "planter-wall",
+      "label": "Entry Pathway & Planter",
+      "labelHi": "प्लांटर बाउंड्री",
+      "defaultColor": "#E2DDD5",
+      "maskFile": "masks/planter-wall.png",
+      "avgLuminance": 0.584
+    }
+  ],
+  "hotspots": [
+    {
+      "toRoomId": "living",
+      "yaw": 75,
+      "pitch": -6,
+      "label": "Enter Living Room",
+      "labelHi": "लिविंग रूम में जाएं"
+    },
+    {
+      "toRoomId": "master_bedroom",
+      "yaw": 78,
+      "pitch": 12,
+      "label": "Go to Balcony Bedroom",
+      "labelHi": "मास्टर बेडरूम"
+    },
+    {
+      "toRoomId": "kitchen",
+      "yaw": 96,
+      "pitch": -3,
+      "label": "Go to Kitchen",
+      "labelHi": "मॉड्यूलर किचन"
+    }
+  ]
+}

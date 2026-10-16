@@ -1,0 +1,74 @@
+{
+  "id": "hallway",
+  "name": "Gallery Hallway & Foyer",
+  "nameHi": "गैलरी हॉलवे",
+  "initialView": {
+    "yaw": 0,
+    "pitch": -2,
+    "fov": 80
+  },
+  "surfaces": [
+    {
+      "id": "feature-wall",
+      "label": "Travertine Art Gallery Wall",
+      "labelHi": "ट्रैवर्टीन आर्ट वॉल",
+      "defaultColor": "#D4C9BC",
+      "maskFile": "masks/feature-wall.png",
+      "avgLuminance": 0.689
+    },
+    {
+      "id": "ceiling",
+      "label": "Double-Height Chandelier Ceiling",
+      "labelHi": "डबल-हाइट सीलिंग",
+      "defaultColor": "#F5F2EB",
+      "maskFile": "masks/ceiling.png",
+      "avgLuminance": 0.681
+    },
+    {
+      "id": "floor",
+      "label": "Polished Italian Marble Floor",
+      "labelHi": "मार्बल फ्लोर",
+      "defaultColor": "#B0A89C",
+      "maskFile": "masks/floor.png",
+      "avgLuminance": 0.602
+    },
+    {
+      "id": "stair-wall",
+      "label": "Floating Oak Staircase Wall",
+      "labelHi": "फ्लोटिंग स्टेयर्स वॉल",
+      "defaultColor": "#EBE4D8",
+      "maskFile": "masks/stair-wall.png",
+      "avgLuminance": 0.519
+    }
+  ],
+  "hotspots": [
+    {
+      "toRoomId": "living",
+      "yaw": -170,
+      "pitch": -3,
+      "label": "Formal Living Room",
+      "labelHi": "लिविंग रूम"
+    },
+    {
+      "toRoomId": "master_bedroom",
+      "yaw": -60,
+      "pitch": 12,
+      "label": "Upstairs to Master Suite",
+      "labelHi": "मास्टर बेडरूम"
+    },
+    {
+      "toRoomId": "kids",
+      "yaw": 55,
+      "pitch": 10,
+      "label": "Upstairs to Kids' Room",
+      "labelHi": "बच्चों का कमरा"
+    },
+    {
+      "toRoomId": "pooja",
+      "yaw": 115,
+      "pitch": -2,
+      "label": "Sacred Pooja Room",
+      "labelHi": "पूजा घर"
+    }
+  ]
+}

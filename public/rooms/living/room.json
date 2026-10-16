@@ -1,0 +1,67 @@
+{
+  "id": "living",
+  "name": "Luxury Living Room",
+  "nameHi": "लक्ज़री लिविंग रूम",
+  "initialView": {
+    "yaw": 0,
+    "pitch": -2,
+    "fov": 80
+  },
+  "surfaces": [
+    {
+      "id": "accent-wall",
+      "label": "TV Media Feature Wall",
+      "labelHi": "टीवी मीडिया फीचर वॉल",
+      "defaultColor": "#D8D0C5",
+      "maskFile": "masks/accent-wall.png",
+      "avgLuminance": 0.549
+    },
+    {
+      "id": "ceiling",
+      "label": "Tray Cove Dome Ceiling",
+      "labelHi": "सीलिंग (छत)",
+      "defaultColor": "#F5F2EB",
+      "maskFile": "masks/ceiling.png",
+      "avgLuminance": 0.71
+    },
+    {
+      "id": "floor",
+      "label": "Oak Herringbone Hardwood",
+      "labelHi": "हार्डवुड फर्श",
+      "defaultColor": "#C6A478",
+      "maskFile": "masks/floor.png",
+      "avgLuminance": 0.491
+    },
+    {
+      "id": "side-wall",
+      "label": "Backlit Shelving & Stair Wall",
+      "labelHi": "साइड पेरिमीटर वॉल",
+      "defaultColor": "#EBE5DA",
+      "maskFile": "masks/side-wall.png",
+      "avgLuminance": 0.533
+    }
+  ],
+  "hotspots": [
+    {
+      "toRoomId": "exterior",
+      "yaw": -70,
+      "pitch": -3,
+      "label": "Exit to Villa Lawn",
+      "labelHi": "विला लॉन / एक्सटीरियर"
+    },
+    {
+      "toRoomId": "master_bedroom",
+      "yaw": 65,
+      "pitch": 12,
+      "label": "Upstairs to Master Bed",
+      "labelHi": "मास्टर बेडरूम"
+    },
+    {
+      "toRoomId": "kitchen",
+      "yaw": -110,
+      "pitch": -3,
+      "label": "Go to Modular Kitchen",
+      "labelHi": "किचन में जाएं"
+    }
+  ]
+}

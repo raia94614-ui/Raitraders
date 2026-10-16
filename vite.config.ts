@@ -12,6 +12,7 @@ export default defineConfig({
           'react-vendor': ['react', 'react-dom'],
           'motion-vendor': ['framer-motion'],
           'icons-vendor': ['lucide-react'],
+          'three-vendor': ['three', '@react-three/fiber', '@react-three/drei'],
         },
       },
     },

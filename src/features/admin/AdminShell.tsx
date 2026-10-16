@@ -35,6 +35,7 @@ import { FaqManagerTab } from './tabs/FaqManagerTab';
 import { AppearanceTab } from './tabs/AppearanceTab';
 import { BackupsTab } from './tabs/BackupsTab';
 import { DeploymentPackTab } from './tabs/DeploymentPackTab';
+import { VisualizerAdminTab } from './tabs/VisualizerAdminTab';
 import { PreviewSimulatorModal } from './PreviewSimulatorModal';
 
 export const AdminShell: React.FC = () => {
@@ -123,6 +124,7 @@ export const AdminShell: React.FC = () => {
 
   const navItems = [
     { id: 'dashboard', label: 'Dashboard', icon: <LayoutDashboard className="w-4 h-4" /> },
+    { id: 'visualizer', label: '3D Visualizer Leads', icon: <Eye className="w-4 h-4 text-[#D4AF37]" /> },
     { id: 'brand', label: 'Brand & Contact', icon: <Building className="w-4 h-4" /> },
     { id: 'hero', label: 'Hero Headlines', icon: <Sparkles className="w-4 h-4" /> },
     { id: 'services', label: 'Services Manager', icon: <Layers className="w-4 h-4" /> },
@@ -295,6 +297,7 @@ export const AdminShell: React.FC = () => {
                 onExportPack={handleExportPack}
               />
             )}
+            {activeTab === 'visualizer' && <VisualizerAdminTab />}
             {activeTab === 'brand' && <BrandSettingsTab />}
             {activeTab === 'hero' && <HeroSettingsTab />}
             {activeTab === 'services' && <ServicesManagerTab />}

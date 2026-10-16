@@ -1,0 +1,60 @@
+{
+  "id": "balcony",
+  "name": "Balcony & Garden Terrace",
+  "nameHi": "बालकनी व गार्डन",
+  "initialView": {
+    "yaw": 0,
+    "pitch": -2,
+    "fov": 80
+  },
+  "surfaces": [
+    {
+      "id": "accent-wall",
+      "label": "Suite Glass & Stucco Wall",
+      "labelHi": "सुइट वॉल व ग्लास",
+      "defaultColor": "#FAF7F0",
+      "maskFile": "masks/accent-wall.png",
+      "avgLuminance": 0.563
+    },
+    {
+      "id": "wood-soffit",
+      "label": "Cedar Wood Eave Soffit",
+      "labelHi": "सीडर वुड सीलिंग",
+      "defaultColor": "#7A5332",
+      "maskFile": "masks/wood-soffit.png",
+      "avgLuminance": 0.51
+    },
+    {
+      "id": "deck",
+      "label": "Teak Timber Decking Floor",
+      "labelHi": "टीक टिम्बर फ्लोर",
+      "defaultColor": "#8B5A36",
+      "maskFile": "masks/deck.png",
+      "avgLuminance": 0.427
+    },
+    {
+      "id": "planter-wall",
+      "label": "Balustrade Planter & Railing",
+      "labelHi": "रेलिंग व प्लांटर",
+      "defaultColor": "#EBE7E0",
+      "maskFile": "masks/planter-wall.png",
+      "avgLuminance": 0.523
+    }
+  ],
+  "hotspots": [
+    {
+      "toRoomId": "master_bedroom",
+      "yaw": -175,
+      "pitch": -2,
+      "label": "Inside Master Suite",
+      "labelHi": "मास्टर बेडरूम"
+    },
+    {
+      "toRoomId": "exterior",
+      "yaw": 5,
+      "pitch": -12,
+      "label": "Down to Villa Lawn",
+      "labelHi": "विला लॉन"
+    }
+  ]
+}

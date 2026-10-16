@@ -1,0 +1,52 @@
+{
+  "id": "dining",
+  "name": "Royal Dining Space",
+  "nameHi": "डाइनिंग एरिया",
+  "initialView": {
+    "yaw": 0,
+    "pitch": 0,
+    "fov": 75
+  },
+  "surfaces": [
+    {
+      "id": "accent-wall",
+      "label": "Dining Accent Wall",
+      "labelHi": "एक्सेंट वॉल",
+      "defaultColor": "#2D3748",
+      "maskFile": "masks/accent-wall.png",
+      "avgLuminance": 0.838
+    },
+    {
+      "id": "wall-left",
+      "label": "Left Wall",
+      "labelHi": "बायां दीवार",
+      "defaultColor": "#F7F6F2",
+      "maskFile": "masks/wall-left.png",
+      "avgLuminance": 0.84
+    },
+    {
+      "id": "ceiling",
+      "label": "Chandelier Ceiling",
+      "labelHi": "सीलिंग (छत)",
+      "defaultColor": "#FAFAF8",
+      "maskFile": "masks/ceiling.png",
+      "avgLuminance": 0.926
+    }
+  ],
+  "hotspots": [
+    {
+      "toRoomId": "kitchen",
+      "yaw": 90,
+      "pitch": -2,
+      "label": "Modular Kitchen",
+      "labelHi": "मॉड्यूलर किचन"
+    },
+    {
+      "toRoomId": "living",
+      "yaw": 180,
+      "pitch": 0,
+      "label": "Living Room",
+      "labelHi": "लिविंग रूम"
+    }
+  ]
+}

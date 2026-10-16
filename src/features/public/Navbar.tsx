@@ -17,13 +17,14 @@ export const Navbar: React.FC<NavbarProps> = ({ brand }) => {
 
   const navLinks = [
     { href: '#services', label: 'Services' },
-    { href: '#visualizer', label: '3D Studio' },
+    { href: '#/visualizer', label: '3D Visualizer' },
     { href: '#texture-lab', label: 'Texture Lab' },
     { href: '#gallery', label: 'Gallery' },
     { href: '#book-visit', label: 'Book Visit' },
     { href: '#reviews', label: 'Reviews' },
     { href: '#contact', label: 'Contact' },
   ];
+
 
   return (
     <header className="sticky top-0 z-40 bg-[#061522]/95 backdrop-blur-md border-b border-gold-500/20 shadow-2xl shadow-black/50 transition-colors duration-200">

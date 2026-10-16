@@ -1,0 +1,82 @@
+[
+  {
+    "id": "living",
+    "name": "Luxury Living Room",
+    "nameHi": "लक्ज़री लिविंग रूम",
+    "emoji": "🛋️",
+    "folder": "living",
+    "areaDefaultSqFt": 240
+  },
+  {
+    "id": "master_bedroom",
+    "name": "Master Suite Bedroom",
+    "nameHi": "मास्टर बेडरूम",
+    "emoji": "🛏️",
+    "folder": "master_bedroom",
+    "areaDefaultSqFt": 220
+  },
+  {
+    "id": "kids",
+    "name": "Scandinavian Kids Room",
+    "nameHi": "बच्चों का कमरा",
+    "emoji": "🧸",
+    "folder": "kids",
+    "areaDefaultSqFt": 180
+  },
+  {
+    "id": "kitchen",
+    "name": "Modular Island Kitchen",
+    "nameHi": "मॉड्यूलर किचन",
+    "emoji": "🍳",
+    "folder": "kitchen",
+    "areaDefaultSqFt": 140
+  },
+  {
+    "id": "dining",
+    "name": "Royal Dining Space",
+    "nameHi": "डाइनिंग एरिया",
+    "emoji": "🍽️",
+    "folder": "dining",
+    "areaDefaultSqFt": 160
+  },
+  {
+    "id": "bathroom",
+    "name": "Luxury Spa Bath",
+    "nameHi": "बाथरूम / स्पा",
+    "emoji": "🛁",
+    "folder": "bathroom",
+    "areaDefaultSqFt": 90
+  },
+  {
+    "id": "pooja",
+    "name": "Sacred Pooja Mandir",
+    "nameHi": "पूजा घर",
+    "emoji": "🪔",
+    "folder": "pooja",
+    "areaDefaultSqFt": 75
+  },
+  {
+    "id": "balcony",
+    "name": "Balcony & Garden Terrace",
+    "nameHi": "बालकनी व गार्डन",
+    "emoji": "🪴",
+    "folder": "balcony",
+    "areaDefaultSqFt": 120
+  },
+  {
+    "id": "hallway",
+    "name": "Gallery Hallway & Foyer",
+    "nameHi": "गैलरी हॉलवे",
+    "emoji": "🖼️",
+    "folder": "hallway",
+    "areaDefaultSqFt": 110
+  },
+  {
+    "id": "exterior",
+    "name": "Modern Architectural Villa",
+    "nameHi": "विला एक्सटीरियर",
+    "emoji": "🏡",
+    "folder": "exterior",
+    "areaDefaultSqFt": 1400
+  }
+]

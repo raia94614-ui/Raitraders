@@ -130,14 +130,15 @@ export const Hero: React.FC<HeroProps> = ({ hero, brand }) => {
                 <span>Book On-Site Visit</span>
               </a>
 
-              {/* Visualizer Jump Button */}
+              {/* 3D Home Visualizer CTA */}
               <a
-                href="#visualizer"
-                className="inline-flex items-center gap-2 px-5 py-3.5 rounded-full text-xs sm:text-sm font-semibold tracking-wide text-cream-100 border border-gold-500/30 bg-navy-900/50 backdrop-blur-md hover:bg-gold-500/15 hover:border-gold-400 transition-all duration-300 whitespace-nowrap"
+                href="#/visualizer"
+                className="group inline-flex items-center gap-2 px-5 py-3.5 rounded-full text-xs sm:text-sm font-bold tracking-wide text-[#D4AF37] border-2 border-[#D4AF37]/60 bg-[#D4AF37]/10 backdrop-blur-md hover:bg-[#D4AF37]/20 hover:border-[#D4AF37] hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 whitespace-nowrap shadow-lg shadow-[#D4AF37]/10"
               >
-                <Eye className="w-4 h-4 text-gold-400" />
-                <span>3D Wall Visualizer</span>
+                <Eye className="w-4 h-4 text-[#D4AF37] group-hover:scale-110 transition-transform" />
+                <span>Apna Ghar Design Karein (3D)</span>
               </a>
+
 
               {/* WhatsApp direct chat button */}
               <a

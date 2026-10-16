@@ -1,0 +1,60 @@
+{
+  "id": "pooja",
+  "name": "Sacred Pooja Mandir",
+  "nameHi": "पूजा घर",
+  "initialView": {
+    "yaw": 0,
+    "pitch": -2,
+    "fov": 80
+  },
+  "surfaces": [
+    {
+      "id": "mandir-altar",
+      "label": "Makrana Marble & Onyx Mandir",
+      "labelHi": "मकराना मार्बल मंदिर",
+      "defaultColor": "#FAF7EE",
+      "maskFile": "masks/mandir-altar.png",
+      "avgLuminance": 0.574
+    },
+    {
+      "id": "jali-wall",
+      "label": "Teak & Brass Jaali Screen Wall",
+      "labelHi": "जाली स्क्रीन वॉल",
+      "defaultColor": "#8B5E3C",
+      "maskFile": "masks/jali-wall.png",
+      "avgLuminance": 0.325
+    },
+    {
+      "id": "ceiling",
+      "label": "Illuminated Lotus Dome Ceiling",
+      "labelHi": "लोटस डोम सीलिंग",
+      "defaultColor": "#F7ECC8",
+      "maskFile": "masks/ceiling.png",
+      "avgLuminance": 0.52
+    },
+    {
+      "id": "floor",
+      "label": "Makrana Marble with Brass Inlay",
+      "labelHi": "मार्बल फ्लोर इनले",
+      "defaultColor": "#EDE8DF",
+      "maskFile": "masks/floor.png",
+      "avgLuminance": 0.767
+    }
+  ],
+  "hotspots": [
+    {
+      "toRoomId": "hallway",
+      "yaw": 180,
+      "pitch": -3,
+      "label": "Exit to Gallery Hallway",
+      "labelHi": "गैलरी हॉलवे"
+    },
+    {
+      "toRoomId": "living",
+      "yaw": -120,
+      "pitch": -3,
+      "label": "To Living Room",
+      "labelHi": "लिविंग रूम"
+    }
+  ]
+}
