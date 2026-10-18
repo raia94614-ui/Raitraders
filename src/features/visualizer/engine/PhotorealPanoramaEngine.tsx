@@ -49,6 +49,7 @@ export const PhotorealPanoramaEngine: React.FC = () => {
   const { camera, gl } = useThree();
   const controlsRef = useRef<OrbitControlsImpl>(null);
   const meshRef = useRef<THREE.Mesh>(null);
+  const hasOrientedRef = useRef(false);
 
   const [roomData, setRoomData] = useState<LoadedRoomJson | null>(null);
 
@@ -92,6 +93,7 @@ export const PhotorealPanoramaEngine: React.FC = () => {
         if (!res.ok) throw new Error(`Could not load /rooms/${activeRoom}/room.json`);
         const json: LoadedRoomJson = await res.json();
         if (isCancelled) return;
+        hasOrientedRef.current = false;
         setRoomData(json);
 
         // 2. Load Base Panorama Texture
@@ -105,8 +107,13 @@ export const PhotorealPanoramaEngine: React.FC = () => {
             tex.magFilter = THREE.LinearFilter;
             tex.wrapS = THREE.RepeatWrapping;
             tex.wrapT = THREE.ClampToEdgeWrapping;
+            tex.needsUpdate = true;
+            if (material.uniforms?.u_baseMap) {
+              material.uniforms.u_baseMap.value = tex;
+            }
             uniforms.u_baseMap.value = tex;
             material.needsUpdate = true;
+            gl.invalidate();
           },
           undefined,
           (err) => {
@@ -275,9 +282,18 @@ export const PhotorealPanoramaEngine: React.FC = () => {
     return () => window.removeEventListener('deviceorientation', handleOrientation);
   }, [gyroEnabled, camera]);
 
-  // Update Compass Heading
+  // Update Compass Heading & ensure guaranteed initial view orientation
   useFrame(() => {
     if (controlsRef.current) {
+      if (!hasOrientedRef.current && roomData?.initialView) {
+        lookAtYawPitch(roomData.initialView.yaw, roomData.initialView.pitch);
+        if (roomData.initialView.fov && 'fov' in camera) {
+          (camera as THREE.PerspectiveCamera).fov = roomData.initialView.fov;
+          (camera as THREE.PerspectiveCamera).updateProjectionMatrix();
+        }
+        hasOrientedRef.current = true;
+      }
+
       controlsRef.current.autoRotate = isAutoRotating;
       controlsRef.current.autoRotateSpeed = 1.0;
       controlsRef.current.update();
