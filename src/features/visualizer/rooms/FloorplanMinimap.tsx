@@ -30,7 +30,7 @@ const FLOORPLAN_ROOMS: RoomHotspot[] = [
 
 export const FloorplanMinimap: React.FC<FloorplanMinimapProps> = ({ className = '' }) => {
   const { activeRoom, setActiveRoom, language } = useVisualizerStore();
-  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(true);
   const [hoveredRoom, setHoveredRoom] = useState<RoomId | null>(null);
 
   const activeHotspot = FLOORPLAN_ROOMS.find((r) => r.id === activeRoom);

@@ -68,12 +68,9 @@ export const VisualizerView: React.FC = () => {
     setPhotoUploadActive,
     setGuidedTourOpen,
     setQuoteModalOpen,
-    language,
-    toggleLanguage,
     loadDesignsState,
   } = useVisualizerStore();
 
-  const isHi = false; // Always English UI per user request
   const [lastInteriorRoom, setLastInteriorRoom] = useState<RoomId>('living');
   const [activeTab, setActiveTab] = useState<SidebarTab>('paint');
   const [sidebarOpen, setSidebarOpen] = useState(true);

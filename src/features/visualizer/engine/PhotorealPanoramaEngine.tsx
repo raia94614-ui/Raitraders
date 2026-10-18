@@ -240,9 +240,10 @@ export const PhotorealPanoramaEngine: React.FC = () => {
   // Expose global look helper for UI compass buttons
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      window.__vizCamera = camera;
-      window.__vizLookDirection = (yaw, pitch = 0) => lookAtYawPitch(yaw, pitch);
-      window.__vizResetView = () => {
+      const win = window as any;
+      win.__vizCamera = camera;
+      win.__vizLookDirection = (yaw: number, pitch = 0) => lookAtYawPitch(yaw, pitch);
+      win.__vizResetView = () => {
         if (roomData?.initialView) {
           lookAtYawPitch(roomData.initialView.yaw, roomData.initialView.pitch);
           if (roomData.initialView.fov && 'fov' in camera) {
@@ -253,7 +254,7 @@ export const PhotorealPanoramaEngine: React.FC = () => {
           lookAtYawPitch(0, 0);
         }
       };
-      window.__vizCanvas = gl.domElement;
+      win.__vizCanvas = gl.domElement;
     }
   }, [lookAtYawPitch, roomData, gl, camera]);
 
